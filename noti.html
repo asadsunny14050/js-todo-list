@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push Notification</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            margin: 20%;
+        }
+
+        button {
+            background-color: cornflowerblue;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            padding: 1rem 5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Push Notification</button>
+
+    <script>
+        let btn = document.querySelector(".btn");
+        btn.addEventListener("click", () => {
+            console.log(btn)
+            Notification.requestPermission().then(perm => {
+                if(perm === "granted"){
+                    const notification = new Notification("Example Notification", {
+                        body : Math.random(),
+                        data : { hello : "world"},
+                        // tag : "Welcome Message",
+                    })
+                    notification.addEventListener("error", e => {
+                        alert(error);
+                    })
+                }
+            })
+        })
+
+        document.addEventListener("visibilitychange", () => {
+            
+                new Notification("Time for some Weed, nigga", {
+                    body : "Rock and Roll Motherfucker",
+                })
+            
+        })
+
+     
+    </script>
+</body>
+
+</html>

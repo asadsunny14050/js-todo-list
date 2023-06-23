@@ -1,0 +1,152 @@
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+
+    background: linear-gradient(120deg, rgb(233, 21, 21), #e64949);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+  }
+
+  header{ 
+    font-size: 1.2rem;
+  } 
+
+  header, form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+  }
+
+  form input, form button { 
+    padding: .5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+  }
+
+  form button {
+
+    color: #e64949;
+    background: white;
+    cursor: pointer;
+    transition: all .5 ease;
+  }
+
+  form button:hover {
+    color: white;
+    background: #e64949;
+
+  }
+
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .todo-list {
+    min-width: 30%;
+    list-style: none;
+  }
+
+  .todo {
+    transition: all .5s ease;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    color: black;
+    align-items: center;
+    margin: .5rem 0;
+    font-size: 1.1rem;
+  }
+
+
+  .todo li {
+    flex: 1;
+  }
+
+
+  .com-btn, .trash-btn {
+
+    background: rgb(177, 23, 23);
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    
+  }
+
+  .trash-btn {
+    background:rgb(233, 21, 21);
+  }
+
+  .todo-item {
+
+    padding: 0 .5rem;
+  }
+
+
+
+
+.completed {
+  opacity: .5;
+}
+
+.completed li {
+  text-decoration: line-through;
+}
+
+.fall {
+  transform: translateX(20rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  color: white;
+  width: 10rem;
+  cursor: pointer;
+  background-color: rgb(36, 34, 34);
+  
+
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  position: relative;
+  overflow:hidden;
+  margin: 1em 0;
+}
+
+.filter-todo {
+  padding: .8rem;
+  font-size: .9em;  
+}
+
+
+
+#arrow {
+  background: rgb(216, 8, 8);
+  padding: .8em .3em;
+  margin-left: 0;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+#arrow:hover {
+  background: white;
+  color:rgb(177, 23, 23);
+}
